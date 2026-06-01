@@ -1,4 +1,4 @@
-<!doctype html>
+=<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -18,12 +18,45 @@
             padding: 0;
             margin: 0;
         }
+        #map-title {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: white;
+            padding: 6px 14px;
+            border: 2px solid rgba(0,0,0,0.2);
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        #map-hint {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: white;
+            padding: 5px 12px;
+            border: 2px solid rgba(0,0,0,0.2);
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            pointer-events: none;
+            white-space: nowrap;
+        }
         </style>
-        <title></title>
+        <title>Frog Census Data Explorer</title>
     </head>
     <body>
         <div id="map">
         </div>
+        <div id="map-title">Frog Census Data Explorer</div>
+        <div id="map-hint">Click on a symbol for more information</div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/L.Control.Layers.Tree.min.js"></script>
